@@ -42,7 +42,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Pace Support</title>
+    <title>Get Started - Social Pace Support</title>
     <link rel="stylesheet" href="social_pace_css.css">
 </head>
 <body>
@@ -63,34 +63,31 @@
         </nav>
     </header>
 
-    <section class="banner">
-        <h1>Welcome to Social Pace Support</h1>
-        <p>Empowering parents with evidence-based tools for modern challenges.</p>
-        <a href="get-started.html" class="btn">Get Started</a>
-        <a href="login.html" class="btn secondary">Log In</a>
-    </section>
-
-    <section class="features">
-        <h2>Our Features</h2>
-        <div class="feature-item">
-            <h3>Feature 1: Parenting Interventions for Kids</h3>
-            <p>Discover tailored strategies to support your child's development with practical, evidence-based parenting interventions designed for various age groups and needs.</p>
+    <section class="browse-section">
+        <h2>Browse Courses</h2>
+        <div class="filter-panel">
+            <label for="age-filter">Filter by Age:</label>
+            <select id="age-filter">
+                <option value="all">All Ages</option>
+                <option value="0-5">0-5 Years</option>
+                <option value="6-12">6-12 Years</option>
+                <option value="13-18">13-18 Years</option>
+            </select>
+            <label for="presentation-filter">Filter by Presentation:</label>
+            <select id="presentation-filter">
+                <option value="all">All Presentations</option>
+                <option value="anxiety">Anxiety</option>
+                <option value="depression">Depression</option>
+                <option value="adhd">ADHD</option>
+                <option value="autism">Autism</option>
+            </select>
+            <button onclick="filterCourses()">Apply Filters</button>
         </div>
-        <div class="feature-item">
-            <h3>Feature 2: Evidence-Based Treatment Approaches</h3>
-            <p>Access proven treatment methods for specific ages and presentations, including anxiety, depression, ADHD, and autism, to address your child’s unique challenges effectively.</p>
+        <div id="course-list" class="course-list">
+            <div class="course-item">Course 1 Placeholder (Ages 0-5, Anxiety)</div>
+            <div class="course-item">Course 2 Placeholder (Ages 6-12, ADHD)</div>
+            <div class="course-item">Course 3 Placeholder (Ages 13-18, Depression)</div>
         </div>
-        <div class="feature-item">
-            <h3>Feature 3: Resources from Leading Experts</h3>
-            <p>Apply actionable advice and insights from top psychologists and educators today, empowering you with tools to enhance your parenting journey immediately.</p>
-        </div>
-    </section>
-
-    <section class="featured-courses">
-        <h2>Featured Courses</h2>
-        <div class="course-item">Course 1 Placeholder</div>
-        <div class="course-item">Course 2 Placeholder</div>
-        <div class="course-item">Course 3 Placeholder</div>
     </section>
 
     <footer>
