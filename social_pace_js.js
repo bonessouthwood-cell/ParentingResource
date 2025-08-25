@@ -1,33 +1,19 @@
-function filterCourses() {
-    const ageFilter = document.getElementById('age-filter').value;
-    const presentationFilter = document.getElementById('presentation-filter').value;
-    const courseList = document.getElementById('course-list');
-    const courses = courseList.getElementsByClassName('course-item');
-
-    for (let course of courses) {
-        const ageMatch = ageFilter === 'all' || course.textContent.includes(`Ages ${ageFilter.split('-')[0]}-${ageFilter.split('-')[1]}`);
-        const presMatch = presentationFilter === 'all' || course.textContent.includes(presentationFilter);
-        course.style.display = ageMatch && presMatch ? 'block' : 'none';
+// Parallax scrolling effect for hero
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.backgroundPositionY = (window.pageYOffset * 0.5) + 'px';
     }
-}
+});
 
-function showAlert(message, type) {
-    const alertDiv = document.createElement('div');
-    alertDiv.className = `alert alert-${type}`;
-    alertDiv.textContent = message;
-    document.body.appendChild(alertDiv);
-    setTimeout(() => alertDiv.remove(), 3000);
-}
+// Hover animations for course cards
+document.querySelectorAll('.course-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.05)';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+    });
+});
 
-// Placeholder login/signup/logout functions (update with API later)
-function login() {
-    showAlert('Login functionality will be added with backend integration.', 'info');
-}
-
-function signup() {
-    showAlert('Signup functionality will be added with backend integration.', 'info');
-}
-
-function logout() {
-    showAlert('Logout functionality will be added with backend integration.', 'info');
-}
+// Other functions...

@@ -42,67 +42,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Pace Support</title>
+    <title>Social Pace - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="social_pace_css.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
-                <rect width="150" height="50" fill="#1E3A5F"/>
-                <text x="10" y="35" font-size="24" fill="white">Social Pace</text>
-            </svg>
+    <!-- Navbar (Fixed, similar to Masterclass) -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo-icon.png" alt="Social Pace Logo" class="logo-icon">
+                Social Pace Support
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="#">Screen Time Management</a></li>
+                            <li><a class="dropdown-item" href="#">Child Psychology</a></li>
+                            <li><a class="dropdown-item" href="#">Parenting Strategies</a></li>
+                            <li><a class="dropdown-item" href="#">Therapeutic Techniques</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="get-started.html">Get Started</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="resources.html">Resources</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="login.html">Login</a>
-            <a href="signup.html">Sign Up</a>
-        </nav>
-    </header>
+    </nav>
 
-    <section class="banner">
-        <h1>Welcome to Social Pace Support</h1>
-        <p>Empowering parents with evidence-based tools for modern challenges.</p>
-        <a href="get-started.html" class="btn">Get Started</a>
-        <a href="login.html" class="btn secondary">Log In</a>
+    <!-- Hero Section with Scrolling Picture (Parallax Video/Image Background) -->
+    <section class="hero parallax">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="https://assets.masterclass.com/video/home-hero.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1 class="hero-title animate-pop">Learn from the world's best parents and experts</h1>
+                <p class="hero-subtitle animate-pop">Unlimited access to thousands of classes on parenting, psychology, and more.</p>
+                <a href="get-started.html" class="btn btn-primary btn-lg animate-pop">Start your free trial</a>
+            </div>
+        </div>
     </section>
 
-    <section class="features">
-        <h2>Our Features</h2>
-        <div class="feature-item">
-            <h3>Feature 1: Parenting Interventions for Kids</h3>
-            <p>Discover tailored strategies to support your child's development with practical, evidence-based parenting interventions designed for various age groups and needs.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Feature 2: Evidence-Based Treatment Approaches</h3>
-            <p>Access proven treatment methods for specific ages and presentations, including anxiety, depression, ADHD, and autism, to address your child’s unique challenges effectively.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Feature 3: Resources from Leading Experts</h3>
-            <p>Apply actionable advice and insights from top psychologists and educators today, empowering you with tools to enhance your parenting journey immediately.</p>
+    <!-- Featured Courses (Similar to Masterclass "New Classes") -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Featured Courses</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1623458070626-9c6e8e7e5c3f" alt="Course 1" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">[Featured Course 1]</h5>
+                            <p class="card-text">[Description]</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1503676260728-90ecd5389c09" alt="Course 2" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">[Featured Course 2]</h5>
+                            <p class="card-text">[Description]</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Course 3" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">[Featured Course 3]</h5>
+                            <p class="card-text">[Description]</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="featured-courses">
-        <h2>Featured Courses</h2>
-        <div class="course-item">Course 1 Placeholder</div>
-        <div class="course-item">Course 2 Placeholder</div>
-        <div class="course-item">Course 3 Placeholder</div>
-    </section>
-
-    <footer>
-        <div class="logo">
-            <svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
-                <rect width="150" height="50" fill="#1E3A5F"/>
-                <text x="10" y="35" font-size="24" fill="white">Social Pace</text>
-            </svg>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Social Pace Support. All rights reserved.</p>
         </div>
-        <p>&copy; 2025 Social Pace Support. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="social_pace_js.js"></script>
 </body>
 </html>

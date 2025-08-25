@@ -42,64 +42,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started - Social Pace Support</title>
+    <title>Social Pace - Get Started</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="social_pace_css.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
-                <rect width="150" height="50" fill="#1E3A5F"/>
-                <text x="10" y="35" font-size="24" fill="white">Social Pace</text>
-            </svg>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo-icon.png" alt="Social Pace Logo" class="logo-icon">
+                Social Pace Support
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="#">Screen Time Management</a></li>
+                            <li><a class="dropdown-item" href="#">Child Psychology</a></li>
+                            <li><a class="dropdown-item" href="#">Parenting Strategies</a></li>
+                            <li><a class="dropdown-item" href="#">Therapeutic Techniques</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="#">Get Started</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="resources.html">Resources</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="login.html">Login</a>
-            <a href="signup.html">Sign Up</a>
-        </nav>
-    </header>
+    </nav>
 
-    <section class="browse-section">
-        <h2>Browse Courses</h2>
-        <div class="filter-panel">
-            <label for="age-filter">Filter by Age:</label>
-            <select id="age-filter">
-                <option value="all">All Ages</option>
-                <option value="0-5">0-5 Years</option>
-                <option value="6-12">6-12 Years</option>
-                <option value="13-18">13-18 Years</option>
-            </select>
-            <label for="presentation-filter">Filter by Presentation:</label>
-            <select id="presentation-filter">
-                <option value="all">All Presentations</option>
-                <option value="anxiety">Anxiety</option>
-                <option value="depression">Depression</option>
-                <option value="adhd">ADHD</option>
-                <option value="autism">Autism</option>
-            </select>
-            <button onclick="filterCourses()">Apply Filters</button>
-        </div>
-        <div id="course-list" class="course-list">
-            <div class="course-item">Course 1 Placeholder (Ages 0-5, Anxiety)</div>
-            <div class="course-item">Course 2 Placeholder (Ages 6-12, ADHD)</div>
-            <div class="course-item">Course 3 Placeholder (Ages 13-18, Depression)</div>
+    <!-- Get Started Section (Browse with Filters) -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Get Started: Browse Courses</h2>
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <label for="ageFilter" class="form-label">Age Group</label>
+                    <select id="ageFilter" class="form-select">
+                        <option value="">All Ages</option>
+                        <option value="0-5">0-5 Years</option>
+                        <option value="6-11">6-11 Years</option>
+                        <option value="12-18">12-18 Years</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="presentationFilter" class="form-label">Presentation</label>
+                    <select id="presentationFilter" class="form-select">
+                        <option value="">All Presentations</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="depression">Depression</option>
+                        <option value="adhd">ADHD</option>
+                        <option value="autism">Autism</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" id="courseList">
+                <!-- Courses populated dynamically or placeholders -->
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="logo">
-            <svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
-                <rect width="150" height="50" fill="#1E3A5F"/>
-                <text x="10" y="35" font-size="24" fill="white">Social Pace</text>
-            </svg>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Social Pace Support. All rights reserved.</p>
         </div>
-        <p>&copy; 2025 Social Pace Support. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="social_pace_js.js"></script>
 </body>
 </html>
