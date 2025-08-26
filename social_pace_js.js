@@ -23,7 +23,6 @@ function filterCourses() {
     const courseList = document.getElementById('courseList');
     if (!courseList) return;
 
-    // Placeholder courses (to be replaced with dynamic data)
     const courses = [
         { age: '0-5', presentation: 'anxiety', title: 'Anxiety Management for Toddlers' },
         { age: '6-11', presentation: 'adhd', title: 'ADHD Strategies for School Age' },
@@ -49,7 +48,7 @@ function filterCourses() {
     });
 }
 
-// Initialize filters on page load for get-started.html
+// Initialize filters on page load for get-started.html and courses.html
 document.addEventListener('DOMContentLoaded', () => {
     const ageFilter = document.getElementById('ageFilter');
     const presentationFilter = document.getElementById('presentationFilter');

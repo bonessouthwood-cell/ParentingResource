@@ -1,15 +1,14 @@
 :root {
     --glossy-black: #1a1a1a; /* Glossy black background */
-    --blue: #1e90ff; /* Trustworthy blue */
+    --navy-blue: #1e3a8a; /* Professional navy blue for text */
     --gold: #ffd700; /* Premium gold for CTAs */
-    --light-gray: #f8f9fa; /* Neutral light gray for specific sections */
+    --charcoal-gray: #4a5568; /* Professional gray for accents */
     --white: #ffffff;
-    --text-dark: #333;
 }
 
 body {
     background: var(--glossy-black);
-    color: var(--text-dark);
+    color: var(--charcoal-gray);
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -22,12 +21,19 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Professional font */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy-blue) !important;
+}
+
+.nav-link {
     color: var(--white) !important;
 }
 
 .nav-link.text-blue {
-    color: var(--blue) !important;
+    color: var(--navy-blue) !important;
 }
 
 .btn-gold {
@@ -56,7 +62,7 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: var(--glossy-black); /* Ensure hero inherits glossy black */
+    background: var(--glossy-black);
 }
 
 .hero-video {
@@ -96,7 +102,7 @@ body {
 .hero-title {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: var(--blue);
+    color: var(--navy-blue);
     text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold);
     animation: popIn 1s ease-out;
 }
@@ -132,12 +138,12 @@ body {
 
 .card-body {
     padding: 1.5rem;
-    background: var(--glossy-black); /* Consistent background */
+    background: var(--glossy-black);
 }
 
 .card-title {
     font-size: 1.25rem;
-    color: var(--blue);
+    color: var(--navy-blue);
 }
 
 .card-text {
@@ -145,17 +151,45 @@ body {
 }
 
 .py-5 {
-    background: var(--glossy-black); /* Apply to all sections */
+    background: var(--glossy-black);
     padding: 3rem 0;
 }
 
 .container {
-    background: var(--glossy-black); /* Ensure container inherits glossy black */
+    background: var(--glossy-black);
+}
+
+/* Resource List */
+.resource-category {
+    margin-bottom: 2rem;
+}
+
+.resource-category h3 {
+    color: var(--navy-blue);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.resource-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.resource-item a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.resource-item a:hover {
+    color: #e6c200;
 }
 
 /* Trust Signals */
 .bg-light-gray {
-    background: var(--light-gray);
+    background: var(--glossy-black); /* Changed to match design */
     padding: 3rem 0;
 }
 
@@ -167,7 +201,7 @@ body {
 }
 
 .footer a {
-    color: var(--blue);
+    color: var(--navy-blue);
     text-decoration: none;
 }
 
@@ -187,5 +221,5 @@ body {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.5rem;
-    color: var(--blue);
+    color: var(--navy-blue);
 }

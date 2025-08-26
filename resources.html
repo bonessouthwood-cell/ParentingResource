@@ -60,7 +60,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Explore</a>
+                        <a class="nav-link" href="index.html">Explore</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,6 +72,9 @@
                             <li><a class="dropdown-item" href="#">Parenting Strategies</a></li>
                             <li><a class="dropdown-item" href="#">Therapeutic Techniques</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
                     </li>
                 </ul>
                 <form class="d-flex me-3">
@@ -93,21 +96,43 @@
     <!-- Resources Section -->
     <section class="py-5 bg-glossy-black">
         <div class="container">
-            <h2 class="section-title text-blue">[Insert Resources Title]</h2>
-            <div class="search-card bg-glossy-black">
-                <h4 class="text-white">Select Your Child's Age Group</h4>
-                <div class="d-flex flex-wrap">
-                    <button class="age-group-btn" data-age="0-5">Infancy & Early Childhood (0-5)</button>
-                    <button class="age-group-btn" data-age="6-11">School Age (6-11)</button>
-                    <button class="age-group-btn" data-age="12-18">Adolescence (12-18)</button>
+            <h2 class="section-title text-blue">Resources by Presentation</h2>
+            <div class="resource-categories">
+                <div class="resource-category">
+                    <h3>Anxiety</h3>
+                    <div class="resource-item"><a href="#">[Placeholder] Anxiety Guide for Parents</a></div>
+                    <div class="resource-item"><a href="#">[Placeholder] Coping Strategies PDF</a></div>
                 </div>
-                <h4 class="mt-4 text-white">Select Presentation</h4>
-                <select id="presentation-filter" class="form-select">
-                    <option value="">Select a Presentation</option>
-                </select>
-            </div>
-            <div class="mt-4" id="resourceResults">
-                <!-- Resources populated by JS -->
+                <div class="resource-category">
+                    <h3>Social Anxiety</h3>
+                    <div class="resource-item"><a href="#">[Placeholder] Social Skills Workbook</a></div>
+                    <div class="resource-item"><a href="#">[Placeholder] Peer Interaction Tips</a></div>
+                </div>
+                <div class="resource-category">
+                    <h3>Depression</h3>
+                    <div class="resource-item"><a href="#">[Placeholder] Depression Support Toolkit</a></div>
+                    <div class="resource-item"><a href="#">[Placeholder] Mood Tracking Resource</a></div>
+                </div>
+                <div class="resource-category">
+                    <h3>Sibling Conflict</h3>
+                    <div class="resource-item"><a href="#">[Placeholder] Sibling Harmony Guide</a></div>
+                    <div class="resource-item"><a href="#">[Placeholder] Conflict Resolution Plan</a></div>
+                </div>
+                <div class="resource-category">
+                    <h3>Autism</h3>
+                    <div class="resource-item"><a href="#">[Placeholder] Autism Awareness Handbook</a></div>
+                    <div class="resource-item"><a href="#">[Placeholder] Sensory Support Tips</a></div>
+                </div>
+                <div class="resource-category">
+                    <h3>ADHD</h3>
+                    <div class="resource-item"><a href="#">[Placeholder] ADHD Management Strategies</a></div>
+                    <div class="resource-item"><a href="#">[Placeholder] Focus Techniques Guide</a></div>
+                </div>
+                <div class="resource-category">
+                    <h3>Specific Learning Disorder</h3>
+                    <div class="resource-item"><a href="#">[Placeholder] Learning Support Plan</a></div>
+                    <div class="resource-item"><a href="#">[Placeholder] Educational Tools Overview</a></div>
+                </div>
             </div>
         </div>
     </section>
